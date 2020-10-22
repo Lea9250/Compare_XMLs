@@ -1,0 +1,47 @@
+/************************************************************************\
+|
+| CSS Theme
+| =========
+|
+| This is a default CSS theme for tabletizer class.
+|
+\************************************************************************/
+	
+table.tabletizer {
+	border: 1px solid black;
+}
+	
+table.tabletizer table {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+}
+	
+table.tabletizer table td {
+	border-bottom: 1px solid black;
+	width: 10%;
+}
+	
+table.tabletizer th {
+	background-color: #707070;
+	font-weight: bold;
+	color: white;
+	padding: 10px;
+	margin: 0px;
+}
+		
+table.tabletizer td {
+	margin: 0px;
+}
+	
+table.tabletizer > tbody > tr > td:nth-child(1) {
+	background-color: #D0D0D0;
+	padding: 10px;
+	margin: 0px;
+	border: 1px solid black;
+}
+	
+table.tabletizer tr {
+	padding: 0px;
+	margin: 0px;
+}

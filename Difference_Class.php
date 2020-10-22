@@ -1,7 +1,7 @@
 <?php
 
 /* 
-Compare two machines arrays
+Compare two devices arrays
 Returns array of differences btw main array and other array
 */
 class Difference {
@@ -10,16 +10,16 @@ class Difference {
     function getDifferencesV1($mainDevice, $device) {
         $differences = array();
         foreach($device as $key => $value) {
-            // matches array key defined in arrayBis
+            // key from $device exists in $mainDevice
             if (isset($mainDevice[$key])) {
-                // if val is array, reuse function on it 
+                // if value is array, reuse function on it 
                 if (is_array($value) && (!empty($value))) {
                     $differences[$key] = $this->getDifferencesV1($mainDevice[$key], $value);
-                // keys values are not equal = its a diff
+                // values do not match = its a diff
                 } elseif ($value != $mainDevice[$key]) {
                     $differences[$key] = $value;
                 }
-            // key doesnt exists in array = its a diff
+            // key doesnt exists in $mainDevice array = its a diff
             } else {
                 $differences[$key] = $value;
             }
@@ -28,7 +28,7 @@ class Difference {
     }
 
 
-    ///////////////////////////////// IGNORE BELOW
+    ///////////////////////////////// IGNORE BELOW ////////////////////////////
     /*
     function isKeyPresent($key, $value, $device) {
         // matches array key defined in arrayBis
@@ -58,7 +58,7 @@ class Difference {
         }
     } */
 
-
+    //////////////
 
     /* function getDifferencesV2($mainDevice, $device) {
         foreach($mainDevice as $key => $value) {

@@ -53,7 +53,7 @@
 			// Prepare 
 			$this->table = "<table class='tabletizer'>";
 				// Table title
-				$this->table .= "<tr><th colspan='2'>" . gettype($array) . "</th></tr>";
+				//$this->table .= "<tr><th colspan='2'>" . gettype($array) . "</th></tr>";
 
 				// Loop
 				foreach ($array as $key => $value) {
@@ -111,7 +111,7 @@
 
 			// Prepare
 			$innerTable = "<td><table>";
-			$innerTable .= "<tr><th colspan='2'>" . gettype($array) . "(" . ($indexed_array ? "Indexed" : "Associative") . ")</th></tr>";
+			// $innerTable .= "<tr><th colspan='2'>" . gettype($array) . "(" . ($indexed_array ? "Indexed" : "Associative") . ")</th></tr>";
 				// Loop
 				foreach ($array as $key => $value) {
 					$innerTable .= "<tr>";

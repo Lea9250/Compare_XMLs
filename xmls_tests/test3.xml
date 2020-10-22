@@ -1,5 +1,5 @@
 <REQUEST>
-	<DEVICEID>Device 3 w/o controllers tag</DEVICEID>
+	<DEVICEID>Device 3 (w/o controllers section)</DEVICEID>
 	<CONTENT>
 		<BATTERIES>
 			<ID>2</ID>
@@ -28,14 +28,5 @@
 			<MMODEL>20H5006TFR</MMODEL>
 			<MSN>L1HF71H00GD</MSN>
 		</BIOS>
-		<CONTROLLERS>
-			<ID>20</ID>
-			<MANUFACTURER>Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers</MANUFACTURER>
-			<NAME>Host bridge [0600]</NAME>
-			<CAPTION />
-			<DESCRIPTION />
-			<VERSION />
-			<TYPE>rev 02</TYPE>
-		</CONTROLLERS>
     </CONTENT>
 </REQUEST>

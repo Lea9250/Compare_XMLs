@@ -17,6 +17,7 @@ First value of xmls array is considered main device
 $xmls = array("xmls_tests/test.xml", "xmls_tests/test2.xml", "xmls_tests/test3.xml", "xmls_tests/test4.xml");
 // $xmls = array("xmls/lea-ThinkPad-E570-2020-09-24-11-21-01.xml", "xmls/OCS-SRV-STAGE-LEA-2020-10-01-08-37-40.xml");
 
+
 // loop other xmls to get arrays as objects
 $i = 0;
 foreach ($xmls as $xml) {
@@ -25,11 +26,10 @@ foreach ($xmls as $xml) {
     $i++;
 }
 
+
 // first array is main device to compare with
 $mainDevice =  array_shift($devices);
-echo "<br><br>";
 $mainDevice = $mainDevice->array;
-echo "<br><br>";
 
 
 // loop over array of other devices to get differences
@@ -40,12 +40,25 @@ foreach ($devices as $key => $value) {
 }
 // var_dump($diffs);
 
-// create tables for each differences array
+
+// COMMENTS
+echo "<h2> First table below displays characteristics of main device used for comparison </h2>";
+echo "<p> Other tables only display differences between main device and other selected devices </p>";
+
+
+// show main device array
+$mainDeviceTable = new Tabletizer();
+echo $mainDeviceTable->fromArray($mainDevice);
+
+
+// create tables for each array of differences (?)
 foreach ($diffs as $array) {
 	$table = new Tabletizer();
 	echo $table->fromArray($array);
 }
 
+
+echo "<br><br><span> Array of differences : </span><br>";
 var_dump($diffs);
 
 ?>
